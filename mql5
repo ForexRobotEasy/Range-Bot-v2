@@ -1,0 +1,145 @@
+mql5
+//+------------------------------------------------------------------+
+//|                                               Range Bot v2.mq5    |
+//|                                      Copyright © 2022 Forex Robot Easy Team |
+//|                                                  forexroboteasy.com |
+//+------------------------------------------------------------------+
+#property copyright 'Copyright © 2022 Forex Robot Easy Team'
+#property link      'forexroboteasy.com'
+
+//+------------------------------------------------------------------+
+//| Expert initialization function                                   |
+//+------------------------------------------------------------------+
+int OnInit()
+{
+   // Add initialization code here
+   return(INIT_SUCCEEDED);
+}
+
+//+------------------------------------------------------------------+
+//| Expert deinitialization function                                 |
+//+------------------------------------------------------------------+
+void OnDeinit(const int reason)
+{
+   // Add deinitialization code here
+}
+
+//+------------------------------------------------------------------+
+//| Expert start function                                            |
+//+------------------------------------------------------------------+
+void OnTick()
+{
+   // Add trading logic here
+   if(IsTradeAllowed())
+   {
+      double lotSize = CalculateLotSize();
+      OpenLongPosition(lotSize);
+      
+      double stopLoss = CalculateStopLoss();
+      double takeProfit = CalculateTakeProfit();
+      SetStopLossAndTakeProfit(stopLoss, takeProfit);
+   }
+   
+   // Add additional trading logic here
+   if(IsTradeAllowed())
+   {
+      double lotSize = CalculateLotSize();
+      OpenShortPosition(lotSize);
+      
+      double stopLoss = CalculateStopLoss();
+      double takeProfit = CalculateTakeProfit();
+      SetStopLossAndTakeProfit(stopLoss, takeProfit);
+   }
+}
+
+//+------------------------------------------------------------------+
+//| Check if trading is allowed                                      |
+//+------------------------------------------------------------------+
+bool IsTradeAllowed()
+{
+   // Add code to check if trading is allowed
+   return true;
+}
+
+//+------------------------------------------------------------------+
+//| Calculate lot size                                               |
+//+------------------------------------------------------------------+
+double CalculateLotSize()
+{
+   // Add code to calculate lot size
+   return 1.0;
+}
+
+//+------------------------------------------------------------------+
+//| Open long position                                               |
+//+------------------------------------------------------------------+
+void OpenLongPosition(const double lotSize)
+{
+   // Add code to open long position
+}
+
+//+------------------------------------------------------------------+
+//| Open short position                                              |
+//+------------------------------------------------------------------+
+void OpenShortPosition(const double lotSize)
+{
+   // Add code to open short position
+}
+
+//+------------------------------------------------------------------+
+//| Calculate stop loss                                              |
+//+------------------------------------------------------------------+
+double CalculateStopLoss()
+{
+   // Add code to calculate stop loss
+   return 100.0;
+}
+
+//+------------------------------------------------------------------+
+//| Calculate take profit                                            |
+//+------------------------------------------------------------------+
+double CalculateTakeProfit()
+{
+   // Add code to calculate take profit
+   return 200.0;
+}
+
+//+------------------------------------------------------------------+
+//| Set stop loss and take profit                                    |
+//+------------------------------------------------------------------+
+void SetStopLossAndTakeProfit(const double stopLoss, const double takeProfit)
+{
+   // Add code to set stop loss and take profit
+}
+
+//+------------------------------------------------------------------+
+//| Test the code and produce results                                |
+//+------------------------------------------------------------------+
+void TestCode()
+{
+   // Add code to test the code and produce results
+}
+
+//+------------------------------------------------------------------+
+//| Documentation and instructions for maintenance and updates       |
+//+------------------------------------------------------------------+
+void Documentation()
+{
+   // Add documentation and instructions for maintenance and updates
+}
+
+//+------------------------------------------------------------------+
+//| Technical support and assistance                                 |
+//+------------------------------------------------------------------+
+void TechnicalSupport()
+{
+   // Add technical support and assistance
+}
+
+//+------------------------------------------------------------------+
+//| Continuous improvement of Range Bot v2                           |
+//+------------------------------------------------------------------+
+void ContinuousImprovement()
+{
+   // Add continuous improvement code here
+}
